@@ -3,40 +3,101 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NEILIT REGESTRATION FORM</title>
-    <link rel="stylesheet" href="log in file.css" />
+    <title>NEILIT Registration Form</title>
+    <link rel="stylesheet" href="log in file.css">
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+      }
+
+      h1 {
+        text-align: center;
+        color: royalblue;
+        margin-bottom: 20px;
+      }
+
+      .container {
+        width: 90%;
+        max-width: 400px;
+        padding: 20px;
+        border: 3px solid royalblue;
+        border-radius: 10px;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      label {
+        font-size: 1rem;
+        color: #333;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 8px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+
+      input[type="submit"] {
+        background-color: royalblue;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+        font-size: 1rem;
+      }
+
+      input[type="submit"]:hover {
+        background-color: darkblue;
+      }
+
+      @media (max-width: 600px) {
+        .container {
+          width: 100%;
+          padding: 15px;
+        }
+
+        h1 {
+          font-size: 1.5rem;
+        }
+      }
+    </style>
   </head>
   <body>
-    <h1>WELCOME TO THE NIELIT OFFICIAL SITE</h1>
-    <div
-      style="
-        height: 300px;
-        width: 400px;
-        position: absolute;
-        top: 100px;
-        left: 150px;
-        border: 3px solid royalblue;
-      "
-    >
-      <div style="padding: 30px;">
-        <form action="/submit">
-          <label for="name">Name:</label><br />
-          <input type="text" placeholder="Name" required /><br /><br />
-          <label for="email">Email</label><br />
-          <input type="email" placeholder="abc@gmail.com" /><br /><br />
-          <label for="massage">massage</label><br />
-          <textarea
-            name="massage"
-            rows="4"
-            cols="40"
-            placeholder=" Please Give Your Feedback "
-            required
-            id=""
-          ></textarea
-          ><br /><br />
-          <input type="submit" name="" id="one" />
-        </form>
-      </div>
+    <div class="container">
+      <h1>WELCOME TO THE NIELIT OFFICIAL SITE</h1>
+      <form action="/submit">
+        <label for="name">Name:</label><br />
+        <input type="text" placeholder="Name" required /><br /><br />
+
+        <label for="email">Email:</label><br />
+        <input type="email" placeholder="abc@gmail.com" required /><br /><br />
+
+        <label for="message">Message:</label><br />
+        <textarea
+          name="message"
+          rows="4"
+          cols="40"
+          placeholder="Please give your feedback"
+          required
+        ></textarea
+        ><br /><br />
+
+        <input type="submit" value="Submit" />
+      </form>
     </div>
   </body>
 </html>
